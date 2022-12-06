@@ -43,13 +43,43 @@ const images = [
     }
 ];
 
-//definisco una variabile 
-const Carousel =  document.querySelector('div.carousel-image');
+const Carousel = document.querySelector('div.carousel-image');
 
-//creo due bottoni
 const buttonOne = document.querySelector('div.previous');
 const buttonTwo = document.querySelector('div.next');
 
-for(let i = 0 ; i < images.length ; i++){
-    let
+let counter = 0;
+
+let itsMyCarosell;
+
+let img = []; 
+
+for( let i = 0 ; i < images.length; i++){
+    let itsMyCarosell = document.createElement('div');
+    itsMyCarosell.innerHTML  = `<img src="./${images[i].image}" alt="images">`
+    itsMyCarosell.classList.add("my_carousel-item");
+    Carousel.appendChild(itsMyCarosell);
+    img.push(itsMyCarosell);
 }
+
+img[counter].classList.add('active');
+
+buttonOne.addEventListener('click', function(){
+    img[counter].classList.remove('active');
+    counter--;
+
+    if(counter < 0){
+        counter = img.lenght-1;
+    }
+    img[counter].classList.add('active');
+});
+
+buttonTwo.addEventListener('click' , function(){
+    img[counter].classList.remove('active');
+    counter++;
+
+    if(counter > img.length-1){
+        counter = 0;
+    }
+    img[counter].classList.add('active');
+})
