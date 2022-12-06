@@ -1,3 +1,20 @@
+/**
+ * Dato un array di oggetti letterali con:
+url dell’immagine
+titolo
+descrizione
+Creare un carosello.
+Milestone 0:
+    Popoliamo dinamicamente il contenuto del carosello con i dati forniti dall'array di oggetti,
+    dal js (dentro al nostro 'carousel-item', per capirci).
+Milestone 1:
+    Al click dell'utente sulle frecce verso l'alto o verso il basso, l'immagine attiva diventerà visibile.
+Milestone 2:
+    Aggiungiamo alla visualizzazione delle immagini anche titolo e testo relative alla singola immagine.
+ */
+
+
+
 const images = [
     {
         image: 'img/01.webp',
@@ -25,3 +42,14 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+//definisco una variabile 
+const Carousel =  document.querySelector('div.carousel-image');
+
+//creo due bottoni
+const buttonOne = document.querySelector('div.previous');
+const buttonTwo = document.querySelector('div.next');
+
+for(let i = 0 ; i < images.length ; i++){
+    let
+}
